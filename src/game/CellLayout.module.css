@@ -1,0 +1,9 @@
+.cell {
+    background-color: #e0e0e0;
+    height: 58px;
+    width: 58px;
+    align-self: center;
+    justify-self: center;
+    text-align: center;
+    align-content: center;
+}

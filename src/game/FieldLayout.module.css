@@ -1,0 +1,12 @@
+.field {
+    background-color: rgb(247, 247, 247);
+    height: 180px;
+    width: 180px;
+    align-self: center;
+    justify-self: center;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    padding: 7px;
+    border-radius: 6px;
+}

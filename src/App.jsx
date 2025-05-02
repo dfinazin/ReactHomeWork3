@@ -1,9 +1,10 @@
-import "./App.css";
+import './App.css';
+import { GameLayout } from './game/GameLayout';
 
 export const App = () => {
-  return (
-    <>
-      <h1>Tic-Tac-Toe</h1>
-    </>
-  );
+    return (
+        <>
+            <GameLayout />
+        </>
+    );
 };
