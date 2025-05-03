@@ -5,7 +5,7 @@ export const CellLayout = (prop) => {
         onSetCellId(cellId);
     };
     return (
-        <div className={styles.cell} onClick={() => movePlayer()}>
+        <div className={!value ? styles.cell_empty : styles.cell_full} onClick={() => movePlayer()}>
             {value}
         </div>
     );
