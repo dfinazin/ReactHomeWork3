@@ -1,11 +1,12 @@
 import styles from './GameLayout.module.css';
-import { InfoLayout } from './InfoLayout';
-import { FieldLayout } from './FieldLayout';
-export const GameLayout = () => {
+import { InfoContainer } from './InfoContainer';
+import { FieldContainer } from './FieldContainer';
+export const GameLayout = (prop) => {
+    const { currentPlayer, isGameEnded, isDraw, field, onSetCellId } = prop;
     return (
         <div className={styles.game}>
-            <InfoLayout />
-            <FieldLayout />
+            <InfoContainer currentPlayer={currentPlayer} isGameEnded={isGameEnded} isDraw={isDraw} />
+            <FieldContainer field={field} onSetCellId={onSetCellId} />
             <div>3</div>
         </div>
     );

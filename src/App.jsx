@@ -1,10 +1,10 @@
 import './App.css';
-import { GameLayout } from './game/GameLayout';
+import { GameContainer } from './game/GameContainer';
 
 export const App = () => {
     return (
         <>
-            <GameLayout />
+            <GameContainer />
         </>
     );
 };
