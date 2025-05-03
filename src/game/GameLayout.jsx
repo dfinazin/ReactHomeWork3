@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import styles from './GameLayout.module.css';
 import { InfoContainer } from './InfoContainer';
 import { FieldContainer } from './FieldContainer';
@@ -11,4 +12,14 @@ export const GameLayout = (prop) => {
             {isDefault ? <ButtonLayout>Настройки</ButtonLayout> : <ButtonLayout onRestartGame={onRestartGame}>Начать игру</ButtonLayout>}
         </div>
     );
+};
+
+GameLayout.propTypes = {
+    currentPlayer: PropTypes.string,
+    isGameEnded: PropTypes.bool,
+    isDraw: PropTypes.bool,
+    field: PropTypes.array,
+    onSetCellId: PropTypes.func,
+    isDefault: PropTypes.bool,
+    onRestartGame: PropTypes.func,
 };

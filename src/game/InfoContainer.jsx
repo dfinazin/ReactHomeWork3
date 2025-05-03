@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import { InfoLayout } from './InfoLayout';
 
 export const InfoContainer = (prop) => {
@@ -15,4 +16,10 @@ export const InfoContainer = (prop) => {
     };
     const infoContent = makeInfoContent(isDraw, isGameEnded, currentPlayer);
     return <InfoLayout>{infoContent}</InfoLayout>;
+};
+
+InfoContainer.propTypes = {
+    isDraw: PropTypes.bool,
+    isGameEnded: PropTypes.bool,
+    currentPlayer: PropTypes.string,
 };
