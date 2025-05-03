@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import styles from './CellLayout.module.css';
 export const CellLayout = (prop) => {
     const { value, cellId, onSetCellId } = prop;
@@ -9,4 +10,10 @@ export const CellLayout = (prop) => {
             {value}
         </div>
     );
+};
+
+CellLayout.propTypes = {
+    value: PropTypes.string,
+    cellId: PropTypes.number,
+    onSetCellId: PropTypes.func,
 };

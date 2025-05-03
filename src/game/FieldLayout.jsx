@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import styles from './FieldLayout.module.css';
 import { CellLayout } from './CellLayout';
 export const FieldLayout = (prop) => {
@@ -12,4 +13,9 @@ export const FieldLayout = (prop) => {
             </div>
         </>
     );
+};
+
+FieldLayout.propTypes = {
+    field: PropTypes.array,
+    onSetCellId: PropTypes.func,
 };

@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import styles from './ButtonLayout.module.css';
 
 export const ButtonLayout = ({ onRestartGame, children }) => {
@@ -13,4 +14,8 @@ export const ButtonLayout = ({ onRestartGame, children }) => {
             {children}
         </div>
     );
+};
+
+ButtonLayout.propTypes = {
+    onRestartGame: PropTypes.func,
 };
