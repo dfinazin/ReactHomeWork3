@@ -17,7 +17,6 @@ export const GameContainer = () => {
     const [isGameEnded, setIsGameEnded] = useState(false);
     const [isDraw, setIsDraw] = useState(false);
     const [field, setField] = useState(['', '', '', '', '', '', '', '', '']);
-    const [cellId, setCellId] = useState();
     const [isDefault, setIsDefault] = useState(true);
 
     const restartGame = () => {
@@ -27,7 +26,6 @@ export const GameContainer = () => {
             setIsDraw(false);
             setField(['', '', '', '', '', '', '', '', '']);
             setIsDefault(true);
-            setCellId();
         }
     };
 
@@ -41,7 +39,7 @@ export const GameContainer = () => {
         return isWin;
     };
 
-    const playerMove = () => {
+    const playerMove = (cellId) => {
         if (!isGameEnded && field[cellId] === '') {
             if (isDefault) {
                 setIsDefault(false);
@@ -69,11 +67,7 @@ export const GameContainer = () => {
                 setIsDraw(true);
             }
         }
-
-        //console.log(cellId, isDraw, isGameEnded, field, currentPlayer);
     };
-
-    playerMove();
 
     return (
         <GameLayout
@@ -82,7 +76,7 @@ export const GameContainer = () => {
             isDraw={isDraw}
             field={field}
             isDefault={isDefault}
-            onSetCellId={setCellId}
+            playerMove={playerMove}
             onRestartGame={restartGame}
         />
     );

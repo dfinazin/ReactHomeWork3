@@ -1,12 +1,9 @@
 import PropTypes from 'prop-types';
 import styles from './CellLayout.module.css';
 export const CellLayout = (prop) => {
-    const { value, cellId, onSetCellId } = prop;
-    const movePlayer = () => {
-        onSetCellId(cellId);
-    };
+    const { value, cellId, playerMove } = prop;
     return (
-        <div className={!value ? styles.cell_empty : styles.cell_full} onClick={() => movePlayer()}>
+        <div className={!value ? styles.cell_empty : styles.cell_full} onClick={() => playerMove(cellId)}>
             {value}
         </div>
     );
@@ -15,5 +12,5 @@ export const CellLayout = (prop) => {
 CellLayout.propTypes = {
     value: PropTypes.string,
     cellId: PropTypes.number,
-    onSetCellId: PropTypes.func,
+    playerMove: PropTypes.func,
 };
